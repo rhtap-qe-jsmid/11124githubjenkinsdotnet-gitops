@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: 11124githubjenkinsdotnet-gitops
+  description: This is GitOps manifest for 11124githubjenkinsdotnet   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: 11124githubjenkinsdotnet
+    backstage.io/kubernetes-id: 11124githubjenkinsdotnet 
+    backstage.io/techdocs-ref: dir:. 
+    jenkins.io/job-full-name: 11124githubjenkinsdotnet-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:11124githubjenkinsdotnet
